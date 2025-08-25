@@ -1,6 +1,10 @@
+import AddPlantDetailsComponent from "../Components/AddPlantDetailsComponent"
+
 function AddPlantPage() {
   return (
-    <div>AddPlantPage</div>
+    <div>
+     <AddPlantDetailsComponent/>
+    </div>
   )
 }
 

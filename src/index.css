@@ -13,3 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.plant-card {
+  border: solid 1px black;
+}
+
+nav{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

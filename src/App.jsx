@@ -18,14 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={ <HomePage/> }/>
         <Route path="/profile" element= { <ProfilePage/>}/>
-        <Route path="/plantlist" element= { <PlantListPage/>}/>
-        <Route path="plantdetails" element={ <PlantDetailsPage/>}/> 
-        <Route path="/addnewplant" element={ <AddPlantPage/> }/>
+        <Route path="/plant-list" element= { <PlantListPage/>}/>
+        <Route path="/plant-details/:plantId" element={ <PlantDetailsPage/>}/> 
+        <Route path="/add-new-plant" element={ <AddPlantPage/> }/>
         <Route path="*" element={<ErrorPage/>}/>
               
-
-
-
       </Routes>
 
 

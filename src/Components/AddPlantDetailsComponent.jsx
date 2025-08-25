@@ -1,6 +1,11 @@
 function AddPlantDetailsComponent() {
   return (
-    <div>AddPlantDetailsComponent</div>
+    <div>
+      <h3>Add New Plant</h3>
+
+      
+    </div>
+    
   )
 }
 export default AddPlantDetailsComponent
