@@ -1,23 +1,34 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
+import PlantCardDetails from "../Components/PlantCardDetails";
 
 function PlantDetailsPage() {
+  const [plantDetails, setPlantDetails] = useState([]);
+  const params = useParams();
 
-  const [plantDetails, setPlantDetails]=useState([])
+  useEffect(() => {
+    getData();
+  }, []);
 
-useEffect(()=>{
-
-
-},[])
-
-
+  const getData = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/plants/${params.plantId}`);
+      console.log(response.data);
+      setPlantDetails(response.data);
+      
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="plant-details-card">
       <h4>Plant Details</h4>
+      <PlantCardDetails {...plantDetails}/>
+      
       <Link to="/add-new-plant">
-      <button>Add New Plant</button>
+        <button>Add New Plant</button>
       </Link>
     </div>
   );

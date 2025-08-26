@@ -154,3 +154,23 @@ background-color: rgb(20, 20, 20);
 color: white;
 min-height: 100vh;
 }
+
+.plant-card-details {
+  background-color: #f9f9f9;   
+  border-radius: 12px;         
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  padding: 20px;               
+  margin: 20px auto;         
+  max-width: 400px;            
+  font-family: 'Arial', sans-serif;
+}
+
+.plant-card-details h6 {
+  margin: 8px 0;               
+  font-weight: 500;            
+  color: #333;                 
+}
+
+.plant-card-details h6 strong {
+  color: #2c3e50;              
+}
