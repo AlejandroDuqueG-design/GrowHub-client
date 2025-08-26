@@ -1,6 +1,18 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 function PlantDetailsPage() {
+
+  const [plantDetails, setPlantDetails]=useState([])
+
+useEffect(()=>{
+
+
+},[])
+
+
+
   return (
     <div className="plant-details-card">
       <h4>Plant Details</h4>

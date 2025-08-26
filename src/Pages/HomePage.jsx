@@ -1,7 +1,7 @@
 function HomePage() {
   return (
-    <div>
-        
+    <div className="home-image">
+        <img src="/src/assets/logogrowhub.png" alt="Logo GrowHub" />
     </div>
   );
 }
