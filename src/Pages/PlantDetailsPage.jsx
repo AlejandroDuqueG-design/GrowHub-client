@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import PlantCardDetails from "../Components/PlantCardDetails";
+import EditPlantDetails from "../Components/EditPlantDetails";
 
 function PlantDetailsPage() {
   const [plantDetails, setPlantDetails] = useState([]);
@@ -32,6 +33,7 @@ function PlantDetailsPage() {
 
       <div className="plant-details-card">
         <PlantCardDetails {...plantDetails} />
+        
       </div>
     </div>
   );
