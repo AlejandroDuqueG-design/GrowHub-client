@@ -1,45 +1,89 @@
-import { Card } from "react-bootstrap"
-import { Link } from "react-router"
+import axios from "axios";
+import { useState } from "react";
+import { Card } from "react-bootstrap";
+import { Link, useNavigate } from "react-router";
 
 function AddPlantCard() {
+
+  const navigate = useNavigate()
+
+  const [commonName, setCommonName] = useState("");
+  const [scientificName, setScientificName] = useState("");
+  const [type, setType] = useState("");
+  const [watering, setWatering] = useState("");
+  const [sunlight, setSunlight] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    const newPlant = {
+    commonName,
+    scientificName,
+    type,
+    watering,
+    sunlight,
+    description
+  }
+
+  axios.post(`${import.meta.env.VITE_SERVER_URL}/plants}`, newPlant)
+  .then(()=>{
+    console.log("Testing adding new plant")
+    navigate("/plants")
+  })
+  .catch((error)=>{
+    console.log(error)
+    
+  })
+
+  }
+
+
   return (
     <>
-     <Card className="plant-card">
-        <form className="plant-form">
 
-        <label>
-          <h6>Common Name:</h6>
-          <input type="text" name="commonName" placeholder= "common name" />
-        </label>
+      <Card className="plant-card">
+        <form className="plant-form" onSubmit={handleSubmit}>
+          <label>
+            <h6>Common Name:</h6>
+            <input type="text" name="commonName" placeholder="common name" value={commonName} onChange={((event)=>{setCommonName(event.target.value)})}/>
+          </label>
 
-        <label>
-        <h6>Scientific Name:</h6>
-        <input type="text" name="scientificName" placeholder= "scientific name" />
-        </label>
+          <label>
+            <h6>Scientific Name:</h6>
+            <input type="text" name="scientificName" placeholder="scientific name" value={scientificName} onChange={((event)=>{setScientificName(event.target.value)})}/>
+          </label>
 
-        <label>
-        <h6>Type: </h6>
-        <select name="type">
-          <option value="tree">Tree</option>
-          <option value="shrub">Shrub</option>
-          <option value="succulent">Succulent</option>
-          <option value="cactus">Cactus</option>
-          <option value="climber">Climber</option>
-        </select>
-        </label>
-        
+          <label>
+            <h6>Type: </h6>
+            <select name="type" value={type} onChange={((event)=>{setType(event.target.value)})}>
+              <option value="">Select Type</option>
+              <option value="tree">Tree</option>
+              <option value="shrub">Shrub</option>
+              <option value="succulent">Succulent</option>
+              <option value="cactus">Cactus</option>
+              <option value="climber">Climber</option>
+            </select>
+          </label>
 
-        <Link to="/plant-details/plantId">
-          <button>Plant Details</button>
-        </Link>
+          <label>
+            <h6>Watering:</h6>
+            <input type="text" name="Watering" placeholder="watering" value={watering} onChange={((event)=>{setWatering(event.target.value)})}/>
+          </label>
+
+          <label>
+            <h6>Sunlight:</h6>
+            <input type="text" name="Sunlight" placeholder="sunlight" value={sunlight} onChange={((event)=>{setSunlight(event.target.value)})}/>
+          </label>
+
+          <label>
+            <h6>Description:</h6>
+            <input type="text" name="Description" placeholder="description" value={description} onChange={((event)=>{setDescription(event.target.value)})}/>
+          </label>
+          <button type="submit">Submit</button>
         </form>
       </Card>
-      
-      
-
-
     </>
-    
-  )
+  );
 }
-export default AddPlantCard
+export default AddPlantCard;

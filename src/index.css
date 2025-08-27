@@ -171,6 +171,38 @@ min-height: 100vh;
   color: #333;                 
 }
 
+.plant-details-container{
+  padding: 20px;
+}
+
 .plant-card-details h6 strong {
   color: #2c3e50;              
+}
+
+.plant-details-header {
+  display: flex;                 
+  justify-content: space-between; 
+  align-items: center;           
+  margin-bottom: 20px;          
+}
+
+.plant-details-header h2 {
+  margin: 0;
+}
+
+.plant-details-header button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.plant-details-header button:hover {
+  background-color: #45a049;
+}
+
+.plant-details-card {
+  width: 100%;
 }
