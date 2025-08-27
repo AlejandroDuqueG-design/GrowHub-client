@@ -8,8 +8,6 @@ function PlantCard({id, commonName, scientificName, type}) {
   const [scientificNameValue, setScientificNameValue] = useState(scientificName)
   const [typeValue, setTypeValue] = useState(type)
 
-
-
   return (
     <>
 

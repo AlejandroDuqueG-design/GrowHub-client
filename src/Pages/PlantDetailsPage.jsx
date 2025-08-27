@@ -14,7 +14,7 @@ function PlantDetailsPage() {
   const getData = async () => {
     try {
       const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/plants/${params.plantId}`);
-      console.log(response.data);
+      //console.log(response.data);
       setPlantDetails(response.data);
     } catch (error) {
       console.log(error);

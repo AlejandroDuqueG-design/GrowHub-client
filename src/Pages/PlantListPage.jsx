@@ -13,7 +13,7 @@ function PlantListPage() {
   const getData = async () => {
     try {
       const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/plants`);
-      console.log(response);
+      //console.log(response);
       setPlantList(response.data);
     } catch (error) {
       console.log(error);

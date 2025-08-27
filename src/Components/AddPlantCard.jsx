@@ -26,18 +26,16 @@ function AddPlantCard() {
     description
   }
 
-  axios.post(`${import.meta.env.VITE_SERVER_URL}/plants}`, newPlant)
+  const response = axios.post(`${import.meta.env.VITE_SERVER_URL}/plants`, newPlant)
   .then(()=>{
-    console.log("Testing adding new plant")
+    //console.log("Testing adding new plant")
     navigate("/plants")
   })
   .catch((error)=>{
     console.log(error)
-    
   })
 
   }
-
 
   return (
     <>
@@ -58,11 +56,11 @@ function AddPlantCard() {
             <h6>Type: </h6>
             <select name="type" value={type} onChange={((event)=>{setType(event.target.value)})}>
               <option value="">Select Type</option>
-              <option value="tree">Tree</option>
-              <option value="shrub">Shrub</option>
-              <option value="succulent">Succulent</option>
-              <option value="cactus">Cactus</option>
-              <option value="climber">Climber</option>
+              <option value="Tree">Tree</option>
+              <option value="Shrub">Shrub</option>
+              <option value="Succulent">Succulent</option>
+              <option value="Cactus">Cactus</option>
+              <option value="Climber">Climber</option>
             </select>
           </label>
 
