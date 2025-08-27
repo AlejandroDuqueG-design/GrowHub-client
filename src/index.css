@@ -1,0 +1,208 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.plant-card {
+  border: solid 1px black;
+}
+
+.navBar{
+  display: flex;                 
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 10px 20px;
+  background-color: #2e7d32;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+.nav-logo h2 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+.nav-logo a {
+  text-decoration: none; 
+  color: white;          
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+}
+.nav-links button {
+  padding: 6px 12px;
+  border: none;
+  background-color: white;
+  color: #2e7d32;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-links button:hover {
+  background-color: #c8e6c9;
+}
+.profile-logo {
+  border-radius: 50%; 
+  cursor: pointer;
+  background-color: white;
+}
+.plant-card {
+  width: 340px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.plant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plant-form h6 {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  color: #2e7d32;
+}
+
+.plant-form input,
+.plant-form select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 0 4px 0
+}
+
+.plant-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.plant-list-general{
+  padding: 20px;
+}
+
+.home-image {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  height: 100vh;               
+}
+
+.home-image img {
+  max-width: 400px;           
+  width: 100%;                
+  height: auto;               
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.profile-info img{
+  max-width: 100px;
+  width: 20%;
+  height: auto;
+}
+
+.add-plant-text{
+  padding: 20px;
+}
+
+.footer{
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.dark-theme{
+background-color: rgb(20, 20, 20);
+color: white;
+min-height: 100vh;
+}
+
+.plant-card-details {
+  background-color: #f9f9f9;   
+  border-radius: 12px;         
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  padding: 20px;               
+  margin: 20px auto;         
+  max-width: 400px;            
+  font-family: 'Arial', sans-serif;
+}
+
+.plant-card-details h6 {
+  margin: 8px 0;               
+  font-weight: 500;            
+  color: #333;                 
+}
+
+.plant-details-container{
+  padding: 20px;
+}
+
+.plant-card-details h6 strong {
+  color: #2c3e50;              
+}
+
+.plant-details-header {
+  display: flex;                 
+  justify-content: space-between; 
+  align-items: center;           
+  margin-bottom: 20px;          
+}
+
+.plant-details-header h2 {
+  margin: 0;
+}
+
+.plant-details-header button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.plant-details-header button:hover {
+  background-color: #45a049;
+}
+
+.plant-details-card {
+  width: 100%;
+}
