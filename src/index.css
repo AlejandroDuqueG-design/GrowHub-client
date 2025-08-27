@@ -206,3 +206,14 @@ min-height: 100vh;
 .plant-details-card {
   width: 100%;
 }
+
+.edit-plantcarddetails-btn{
+border-radius: 4px;
+}
+.carddetails-container{
+  display: flexbox;
+  text-align: center;
+}
+.select-filter{
+  border-radius: 4px;
+}

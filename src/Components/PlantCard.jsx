@@ -35,7 +35,7 @@ function PlantCard({id, commonName, scientificName, type}) {
           <option value="Climber">Climber</option>
           <option value="Bush">Bush</option>
           <option value="Herbaceous Perennial">Herbaceous Perennial</option>
-          <option value="Herbaceous Shrub">Herbaceous Perennial</option>
+          <option value="Herbaceous Shrub">Herbaceous Shrub</option>
         </select>
         </label>
         

@@ -14,7 +14,6 @@ function PlantDetailsPage() {
   const getData = async () => {
     try {
       const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/plants/${params.plantId}`);
-      //console.log(response.data);
       setPlantDetails(response.data);
     } catch (error) {
       console.log(error);
@@ -24,14 +23,16 @@ function PlantDetailsPage() {
   return (
     <div className="plant-details-container">
       <div className="plant-details-header">
-      <h4>Plant Details</h4>
+        <h4>Plant Details</h4>
 
-      <Link to="/add-new-plant">
-        <button>Add New Plant</button>
-      </Link>
+        <Link to="/add-new-plant">
+          <button>Add New Plant</button>
+        </Link>
       </div>
 
-      <div className="plant-details-card"><PlantCardDetails {...plantDetails} /></div>
+      <div className="plant-details-card">
+        <PlantCardDetails {...plantDetails} />
+      </div>
     </div>
   );
 }
