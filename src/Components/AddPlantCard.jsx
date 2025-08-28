@@ -61,6 +61,8 @@ function AddPlantCard() {
               <option value="Succulent">Succulent</option>
               <option value="Cactus">Cactus</option>
               <option value="Climber">Climber</option>
+              <option value="Herbaceous Perennial">Herbaceous Perennial</option>
+              <option value="Herbaceous Shrub">Herbaceous Shrub</option>
             </select>
           </label>
 

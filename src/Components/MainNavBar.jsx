@@ -36,6 +36,9 @@ function MainNavBar() {
         </Link>
         <Link to="/add-new-plant">
           <button>Add New Plant</button>
+          </Link>
+        <Link to="/treatments">
+          <button>Treatments</button>
         </Link>
         <Link to="/profile">
           <img className="profile-logo" src="/src/assets/profileicon.png" width="40"></img>

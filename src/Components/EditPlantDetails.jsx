@@ -1,11 +1,9 @@
 import { Card } from "react-bootstrap";
 
-function EditPlantDetails({onCancel}) {
-
-
+function EditPlantDetails({ onCancel }) {
   return (
     <div>
-      <Card >
+      <Card>
         <form className="plant-form">
           <label>
             <h6>Common Name:</h6>
@@ -26,6 +24,9 @@ function EditPlantDetails({onCancel}) {
               <option value="Succulent">Succulent</option>
               <option value="Cactus">Cactus</option>
               <option value="Climber">Climber</option>
+              <option value="Bush">Bush</option>
+              <option value="Herbaceous Perennial">Herbaceous Perennial</option>
+              <option value="Herbaceous Shrub">Herbaceous Shrub</option>
             </select>
           </label>
 
@@ -45,11 +46,11 @@ function EditPlantDetails({onCancel}) {
           </label>
 
           <button type="submit">Save</button>
-          <button type="button" onClick={onCancel}>Cancel</button>
-
+          <button type="button" onClick={onCancel}>
+            Cancel
+          </button>
         </form>
       </Card>
-      
     </div>
   );
 }

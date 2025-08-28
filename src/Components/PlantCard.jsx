@@ -8,9 +8,11 @@ function PlantCard({id, commonName, scientificName, type}) {
   const [scientificNameValue, setScientificNameValue] = useState(scientificName)
   const [typeValue, setTypeValue] = useState(type)
 
+  
   return (
-    <>
 
+//TARJETA CON LA INFO DE LAS PLANTAS
+    <>
       <Card className="plant-card">
        
         <form className="plant-form">
@@ -43,6 +45,7 @@ function PlantCard({id, commonName, scientificName, type}) {
         <Link to={`/plant-details/${id}`}>
           <button>Plant Details</button>
         </Link>
+
         </form>
       </Card>
     </>

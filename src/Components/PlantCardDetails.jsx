@@ -28,7 +28,7 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
     );
   }
 
-  // 👇 Esto solo se renderiza si no estamos editando
+  // Esto solo se renderiza si no estamos editando
   return (
     <div className="carddetails-container">
       <Card className="plant-card-details">
@@ -38,10 +38,12 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
         <h6><strong>Watering:</strong> {watering}</h6>
         <h6><strong>Sunlight:</strong> {sunlight}</h6>
         <h6><strong>Description:</strong> {description}</h6>
-
+        
+        <Link to={`/treatments/${id}`}><button >See treatments</button></Link>
+        
+      </Card>
         <button type="button" onClick={() => setIsEditCardShowing(true)}>Edit</button>
         <button type="button" onClick={handleDelete}>Delete</button>
-      </Card>
     </div>
   );
 }

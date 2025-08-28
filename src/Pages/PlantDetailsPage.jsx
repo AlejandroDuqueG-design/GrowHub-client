@@ -26,9 +26,7 @@ function PlantDetailsPage() {
       <div className="plant-details-header">
         <h4>Plant Details</h4>
 
-        <Link to="/add-new-plant">
-          <button>Add New Plant</button>
-        </Link>
+
       </div>
 
       <div className="plant-details-card">

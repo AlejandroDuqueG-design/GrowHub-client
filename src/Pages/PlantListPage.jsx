@@ -21,12 +21,15 @@ function PlantListPage() {
     }
   };
   return (
-    <div className="plant-list-general">
+
+
+    //FILTRO
+    <div className="plantlistpage-container">
       <h3>All our plants</h3>
 
       <p>Here is a list with all the plants added by our users. Every card contains plant basic info like: common name, scientific name and type.</p>
 
-      <select className="select-filter" name="type" value={selectedType} onChange={(event)=> setSelectedType(event.target.value)}>
+      <select className="selectfilter" name="type" value={selectedType} onChange={(event)=> setSelectedType(event.target.value)}>
         <option value="">Filter by Type</option>
         <option value="Tree">Tree</option>
         <option value="Shrub">Shrub</option>
