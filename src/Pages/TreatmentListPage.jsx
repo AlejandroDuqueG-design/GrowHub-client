@@ -29,11 +29,12 @@ function TreatmentListPage() {
   return (
     <div>
       <h4>Treatments</h4>
+      <div><button>Add New Treatment</button></div>
       <ul>
         {treatments.map((eachTreatment) => {
           return <TreatmentCard key={eachTreatment.id} {...eachTreatment} />;
         })}
-        <Link to={`/add-new-treatment`}><button>Add New Treatment</button></Link>
+       
       </ul>
     </div>
   );

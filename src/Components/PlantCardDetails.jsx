@@ -10,7 +10,6 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
 
   const handleDelete = async () => {
     try {
-      console.log("Testing ", `${import.meta.env.VITE_SERVER_URL}/plants/${id}`);
       const response = await axios.delete(`${import.meta.env.VITE_SERVER_URL}/plants/${id}`);
       console.log(response.data);
     } catch (error) {

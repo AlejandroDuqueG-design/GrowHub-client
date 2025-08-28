@@ -1,6 +1,13 @@
+import AddTreatment from "../Components/AddTreatment"
+
 function AddTreatmentPage() {
   return (
-    <div>AddTreatmentPage</div>
+    <div>
+
+        < AddTreatment/>
+
+
+    </div>
   )
 }
 export default AddTreatmentPage
