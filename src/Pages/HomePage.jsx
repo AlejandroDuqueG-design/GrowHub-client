@@ -6,7 +6,9 @@ function HomePage() {
       <Row className="justify-content-center">
         <Col xs={10}>
           <Card className="text-center">
-            <Card.Header as={"h3"} className="bg-light">GrowHub</Card.Header>
+            <Card.Header as={"h3"} className="bg-light">
+              GrowHub
+            </Card.Header>
             <Card.Body>
               <Card.Title>Your Green Collection, Organized.</Card.Title>
               <Card.Text>

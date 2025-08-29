@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
-import { Link } from "react-router";
 
 function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
   //const [plantIdValue, setPlantIdValue] = useState(plantId);
@@ -18,7 +17,7 @@ function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
   };
 
   return (
-    <Card className="text-center align-self-center" >
+    <Card className="text-center align-self-center">
       <Card.Body>
         <Form className="">
           <Form.Group>

@@ -45,7 +45,9 @@ function EditPlantDetails({ onCancel }) {
             <input type="text" name="Description" placeholder="description" />
           </label>
 
-          <Button variant="success" type="submit">Save</Button>
+          <Button variant="success" type="submit">
+            Save
+          </Button>
           <Button variant="secondary" type="button" onClick={onCancel}>
             Cancel
           </Button>

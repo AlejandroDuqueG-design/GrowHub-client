@@ -10,7 +10,7 @@ function PlantCard({ id, commonName, scientificName, type }) {
   return (
     //TARJETA CON LA INFO DE LAS PLANTAS
     <>
-      <Card className="text-center" style={{ width: '18rem' }}>
+      <Card className="text-center" style={{ width: "18rem" }}>
         <Card.Body>
           <form className="plant-form">
             <label>

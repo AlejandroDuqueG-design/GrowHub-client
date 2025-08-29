@@ -60,8 +60,12 @@ function AddTreatment() {
               }}
             />
           </label>
-          <Button variant="success" type="submit">Submit</Button>
-          <Button variant="secondary" type="button">Cancel</Button>
+          <Button variant="success" type="submit">
+            Submit
+          </Button>
+          <Button variant="secondary" type="button">
+            Cancel
+          </Button>
         </form>
       </Card>
     </div>

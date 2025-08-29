@@ -28,7 +28,6 @@ function AddPlantCard() {
     const response = axios
       .post(`${import.meta.env.VITE_SERVER_URL}/plants`, newPlant)
       .then(() => {
-        //console.log("Testing adding new plant")
         navigate("/plants");
       })
       .catch((error) => {
@@ -38,105 +37,93 @@ function AddPlantCard() {
 
   return (
     <>
-      <Card className="text-center align-self-center" style={{ width: '30rem' }}>
+      <Card className="text-center align-self-center" style={{ width: "30rem" }}>
         <Card.Body>
           <Card.Title className="mb-5 mt-2">Add New Plant</Card.Title>
           <Form className="" onSubmit={handleSubmit}>
             <Form.Group>
-              <Form.Label>
-                Common Name:
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="commonName"
-                  placeholder="common name"
-                  value={commonName}
-                  onChange={(event) => {
-                    setCommonName(event.target.value);
-                  }}
-                />
+              <Form.Label>Common Name:</Form.Label>
+              <Form.Control
+                type="text"
+                name="commonName"
+                placeholder="common name"
+                value={commonName}
+                onChange={(event) => {
+                  setCommonName(event.target.value);
+                }}
+              />
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>
-                Scientific Name:
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="scientificName"
-                  placeholder="scientific name"
-                  value={scientificName}
-                  onChange={(event) => {
-                    setScientificName(event.target.value);
-                  }}
-                />
+              <Form.Label>Scientific Name:</Form.Label>
+              <Form.Control
+                type="text"
+                name="scientificName"
+                placeholder="scientific name"
+                value={scientificName}
+                onChange={(event) => {
+                  setScientificName(event.target.value);
+                }}
+              />
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>
-                Type: 
-                </Form.Label>
-                <Form.Select
-                  name="type"
-                  value={type}
-                  onChange={(event) => {
-                    setType(event.target.value);
-                  }}
-                >
-                  <option value="">Select Type</option>
-                  <option value="Tree">Tree</option>
-                  <option value="Shrub">Shrub</option>
-                  <option value="Succulent">Succulent</option>
-                  <option value="Cactus">Cactus</option>
-                  <option value="Climber">Climber</option>
-                  <option value="Herbaceous Perennial">Herbaceous Perennial</option>
-                  <option value="Herbaceous Shrub">Herbaceous Shrub</option>
-                </Form.Select>
+              <Form.Label>Type:</Form.Label>
+              <Form.Select
+                name="type"
+                value={type}
+                onChange={(event) => {
+                  setType(event.target.value);
+                }}
+              >
+                <option value="">Select Type</option>
+                <option value="Tree">Tree</option>
+                <option value="Shrub">Shrub</option>
+                <option value="Succulent">Succulent</option>
+                <option value="Cactus">Cactus</option>
+                <option value="Climber">Climber</option>
+                <option value="Herbaceous Perennial">Herbaceous Perennial</option>
+                <option value="Herbaceous Shrub">Herbaceous Shrub</option>
+              </Form.Select>
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>
-                Watering:
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="Watering"
-                  placeholder="watering"
-                  value={watering}
-                  onChange={(event) => {
-                    setWatering(event.target.value);
-                  }}
-                />
+              <Form.Label>Watering:</Form.Label>
+              <Form.Control
+                type="text"
+                name="Watering"
+                placeholder="watering"
+                value={watering}
+                onChange={(event) => {
+                  setWatering(event.target.value);
+                }}
+              />
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>
-                Sunlight:
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="Sunlight"
-                  placeholder="sunlight"
-                  value={sunlight}
-                  onChange={(event) => {
-                    setSunlight(event.target.value);
-                  }}
-                />
+              <Form.Label>Sunlight:</Form.Label>
+              <Form.Control
+                type="text"
+                name="Sunlight"
+                placeholder="sunlight"
+                value={sunlight}
+                onChange={(event) => {
+                  setSunlight(event.target.value);
+                }}
+              />
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>
-                Description:
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  name="Description"
-                  placeholder="description"
-                  value={description}
-                  onChange={(event) => {
-                    setDescription(event.target.value);
-                  }}
-                />
+              <Form.Label>Description:</Form.Label>
+              <Form.Control
+                type="text"
+                name="Description"
+                placeholder="description"
+                value={description}
+                onChange={(event) => {
+                  setDescription(event.target.value);
+                }}
+              />
             </Form.Group>
             <Button className="mt-3" variant="success" type="submit">
               Submit

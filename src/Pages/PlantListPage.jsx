@@ -41,8 +41,8 @@ function PlantListPage() {
           </Form.Select>
         </Col>
       </Row>
-      
-      <div className="d-flex flex-column gap-4 my-4 align-items-center" >
+
+      <div className="d-flex flex-column gap-4 my-4 align-items-center">
         {plantsList.map((eachPlant) => {
           return <PlantCard key={eachPlant.id} {...eachPlant} />;
         })}

@@ -1,13 +1,10 @@
-import AddTreatment from "../Components/AddTreatment"
+import AddTreatment from "../Components/AddTreatment";
 
 function AddTreatmentPage() {
   return (
     <div>
-
-        < AddTreatment/>
-
-
+      <AddTreatment />
     </div>
-  )
+  );
 }
-export default AddTreatmentPage
+export default AddTreatmentPage;

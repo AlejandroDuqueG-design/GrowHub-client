@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import PlantCardDetails from "../Components/PlantCardDetails";
 
-
 function PlantDetailsPage() {
   const [plantDetails, setPlantDetails] = useState([]);
   const params = useParams();
@@ -25,14 +24,11 @@ function PlantDetailsPage() {
     <div className="plant-details-container min-vh-100">
       <div className="">
         <h5>Plant Details</h5>
-        <p>This a more detail information regarding each plant, data like: watering, Sunlight and plant description are included here</p>
-
-
+        <p>This a more detail information regarding each plant, data like: watering, sunlight and plant description are included here</p>
       </div>
 
       <div className="">
         <PlantCardDetails {...plantDetails} />
-        
       </div>
     </div>
   );
