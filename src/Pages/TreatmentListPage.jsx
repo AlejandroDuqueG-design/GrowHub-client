@@ -42,7 +42,9 @@ function TreatmentListPage() {
       </Row>
       <Row>
         <Col>
+        <Link to={"/add-new-treatment"}>
           <Button variant="success">Add New Treatment</Button>
+        </Link>
         </Col>
       </Row>
       <Row>

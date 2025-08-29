@@ -1,23 +1,23 @@
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Form } from "react-bootstrap";
 
 function EditPlantDetails({ onCancel }) {
   return (
-    <div>
-      <Card>
-        <form className="plant-form">
-          <label>
-            <h6>Common Name:</h6>
-            <input type="text" name="commonName" placeholder="common name" />
-          </label>
+    <Card className="text-center">
+      <Card.Body>
+        <Form>
+          <Form.Group>
+            <Form.Label>Common Name:</Form.Label>
+            <Form.Control type="text" name="commonName" placeholder="common name" />
+          </Form.Group>
 
-          <label>
-            <h6>Scientific Name:</h6>
-            <input type="text" name="scientificName" placeholder="scientific name" />
-          </label>
+          <Form.Group>
+            <Form.Label>Scientific Name:</Form.Label>
+            <Form.Control type="text" name="scientificName" placeholder="scientific name" />
+          </Form.Group>
 
-          <label>
-            <h6>Type: </h6>
-            <select name="type">
+          <Form.Group>
+            <Form.Label>Type:</Form.Label>
+            <Form.Select name="type">
               <option value="">Select Type</option>
               <option value="Tree">Tree</option>
               <option value="Shrub">Shrub</option>
@@ -27,33 +27,34 @@ function EditPlantDetails({ onCancel }) {
               <option value="Bush">Bush</option>
               <option value="Herbaceous Perennial">Herbaceous Perennial</option>
               <option value="Herbaceous Shrub">Herbaceous Shrub</option>
-            </select>
-          </label>
+            </Form.Select>
+          </Form.Group>
 
-          <label>
-            <h6>Watering:</h6>
-            <input type="text" name="Watering" placeholder="watering" />
-          </label>
+          <Form.Group>
+            <Form.Label>Watering:</Form.Label>
+            <Form.Control type="text" name="Watering" placeholder="watering" />
+          </Form.Group>
 
-          <label>
-            <h6>Sunlight:</h6>
-            <input type="text" name="Sunlight" placeholder="sunlight" />
-          </label>
+          <Form.Group>
+            <Form.Label>Sunlight:</Form.Label>
+            <Form.Control type="text" name="Sunlight" placeholder="sunlight" />
+          </Form.Group>
 
-          <label>
-            <h6>Description:</h6>
-            <input type="text" name="Description" placeholder="description" />
-          </label>
-
-          <Button variant="success" type="submit">
-            Save
-          </Button>
-          <Button variant="secondary" type="button" onClick={onCancel}>
-            Cancel
-          </Button>
-        </form>
-      </Card>
-    </div>
+          <Form.Group>
+            <Form.Label>Description:</Form.Label>
+            <Form.Control type="text" name="Description" placeholder="description" />
+          </Form.Group>
+          <Form.Group className="d-flex justify-content-center gap-5 my-4">
+            <Button variant="success" type="submit">
+              Save
+            </Button>
+            <Button variant="secondary" type="button" onClick={onCancel}>
+              Cancel
+            </Button>
+          </Form.Group>
+        </Form>
+      </Card.Body>
+    </Card>
   );
 }
 export default EditPlantDetails;

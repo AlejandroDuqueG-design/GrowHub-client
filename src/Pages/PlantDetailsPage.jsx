@@ -21,7 +21,7 @@ function PlantDetailsPage() {
   };
 
   return (
-    <div className="plant-details-container min-vh-100">
+    <div className="min-vh-100">
       <div className="">
         <h5>Plant Details</h5>
         <p>This a more detail information regarding each plant, data like: watering, sunlight and plant description are included here</p>

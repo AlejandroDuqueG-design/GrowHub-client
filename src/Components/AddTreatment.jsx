@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 function AddTreatment() {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   //   const [id, setid] = useState("");
   //   const [plantId, setPlantId] = useState("");
@@ -28,6 +28,8 @@ function AddTreatment() {
       .catch((error) => {
         console.log(error);
       });
+
+      navigate(-1)
   };
   //Aqui cierra la función handleSubmit
 
@@ -63,9 +65,11 @@ function AddTreatment() {
           <Button variant="success" type="submit">
             Submit
           </Button>
+          <Link to={"/treatments"}>
           <Button variant="secondary" type="button">
             Cancel
           </Button>
+            </Link>
         </form>
       </Card>
     </div>

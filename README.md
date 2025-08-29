@@ -2,7 +2,7 @@
 
 This repository is a [json-server](https://github.com/AlejandroDuqueG-design/GrowHub-server) created to feed data into the GrowHub React Application.
 
-#### [Growhub](https://github.com/AlejandroDuqueG-design/GrowHub-client)
+#### [Growhub App Repository](https://github.com/AlejandroDuqueG-design/GrowHub-client)
 
 # Server Structure
 
@@ -42,11 +42,10 @@ This repository is a [json-server](https://github.com/AlejandroDuqueG-design/Gro
 | DELETE      | `/plants/:plantId` |                             | Deletes a plant object       |
 | GET         | `/treatments`       |                             | Sends all treatments           |
 | POST        | `/treatments`       | {plantId, treatmentDescription, timeOfYear}              | Creates a new treatment        |
-| DELETe       | `/treatments`       | {plantId, treatmentDescription, timeOfYear}              | Deletes a treatment object             |
+| DELETE       | `/treatments`       | {plantId, treatmentDescription, timeOfYear}              | Deletes a treatment object             |
 
 
 ## Links
-
 
 ### Project
 
@@ -54,7 +53,7 @@ This repository is a [json-server](https://github.com/AlejandroDuqueG-design/Gro
 
 [Link to GrowHub/Server respository](www.github.com/AlejandroDuqueG-design/GrowHub-server)
 
-[Deploy Link](www.your-deploy-url-here.com)
+[Deploy Link](www.app.netlify.com/projects/growhub-app/overview)
 
 ### Figma
 

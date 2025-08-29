@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
+import { useNavigate } from "react-router";
 
 function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
   //const [plantIdValue, setPlantIdValue] = useState(plantId);
+
+  const navigate=useNavigate()
   const [treatmentDescriptionValue, setTreatmentDescriptionValue] = useState(treatmentDescription);
   const [timeOfYearValue, setTimeOfYearValue] = useState(timeOfYear);
 
@@ -14,6 +17,7 @@ function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
     } catch (error) {
       console.log(error);
     }
+    navigate(-1)
   };
 
   return (
@@ -49,7 +53,7 @@ function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
       </Card.Body>
       <Card.Footer>
         <Button variant="outline-secondary" onClick={handleDelete}>
-          Delete treatment
+          Delete Treatment
         </Button>
       </Card.Footer>
     </Card>

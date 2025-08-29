@@ -53,6 +53,7 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
             <strong>Description:</strong> {description}
           </h6>
 
+        </Card.Body>
           <Card.Footer className="bg-success mt-3">
             <Link to={`/treatments/${id}`}>
               <Button className="mt-2 mb-2" variant="light">
@@ -60,7 +61,6 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
               </Button>
             </Link>
           </Card.Footer>
-        </Card.Body>
       </Card>
       <Button className="me-1" variant="outline-success" type="button" onClick={() => setIsEditCardShowing(true)}>
         Edit
