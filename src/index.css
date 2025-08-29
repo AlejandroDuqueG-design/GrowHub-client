@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body{
-  padding-top: 100px;
+  padding-top: 80px;
 }
 .plant-card {
   border: solid 1px black;
@@ -111,7 +111,8 @@ body{
 
 .home-image {
   display: flex;              
-  justify-content: center;    
+  justify-content: center;
+  flex-direction: column;    
   align-items: center;        
   height: 100vh;               
 }

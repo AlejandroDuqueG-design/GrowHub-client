@@ -60,9 +60,9 @@ function PlantCard({ id, commonName, scientificName, type }) {
             </label>
           </form>
         </Card.Body>
-        <Card.Footer>
+        <Card.Footer className="bg-success">
           <Link to={`/plant-details/${id}`}>
-            <Button variant="success">Plant Details</Button>
+            <Button variant="light">Plant Details</Button>
           </Link>
         </Card.Footer>
       </Card>

@@ -30,7 +30,9 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
   // Esto solo se renderiza si no estamos editando
   return (
     <div className="carddetails-container">
-      <Card className="plant-card-details">
+      <Card className="plant-card-details bg-light" border="success">
+        <Card.Header className="bg-success text-white">Plant Details</Card.Header>
+        <Card.Body>
         <h6><strong>Common Name:</strong> {commonName}</h6>
         <h6><strong>Scientific Name:</strong> {scientificName}</h6>
         <h6><strong>Type:</strong> {type}</h6>
@@ -39,10 +41,11 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
         <h6><strong>Description:</strong> {description}</h6>
         
 
-        <Card.Footer>
+        <Card.Footer className="bg-success mt-3">
         <Link to={`/plant-details/${id}`}>
-        <Link to={`/treatments/${id}`}><Button className="mt-2" variant="success" >See treatments</Button></Link></Link>
+        <Link to={`/treatments/${id}`}><Button className="mt-2 mb-2" variant="light" >See treatments</Button></Link></Link>
         </Card.Footer>
+        </Card.Body>
         
       </Card>
         <Button className="me-1" variant="outline-success" type="button" onClick={() => setIsEditCardShowing(true)}>Edit</Button>

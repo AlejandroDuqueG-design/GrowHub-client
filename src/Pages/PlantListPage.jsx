@@ -23,12 +23,12 @@ function PlantListPage() {
   };
   return (
     //FILTRO
-    <div className="d-flex flex-column px-4">
+    <div className="d-flex flex-column px-4 min-vh-100">
       <h5>All our plants</h5>
       <p>Here is a list with all the plants. Every card contains plant basic info like: common name, scientific name and type.</p>
       <Row className="justify-content-center">
         <Col xs={6}>
-          <Form.Select className=""  name="type" value={selectedType} onChange={(event) => setSelectedType(event.target.value)}>
+          <Form.Select className="mt-3" name="type" value={selectedType} onChange={(event) => setSelectedType(event.target.value)}>
             <option value="">Filter by Type</option>
             <option value="Tree">Tree</option>
             <option value="Shrub">Shrub</option>

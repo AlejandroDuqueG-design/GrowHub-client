@@ -16,7 +16,7 @@ function MainNavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={()=>setExpanded(false)} as={Link} to="/">Home</Nav.Link> 
-            <Nav.Link onClick={()=>setExpanded(false)} as={Link} to="/plants">All Plants</Nav.Link>
+            <Nav.Link onClick={()=>setExpanded(false)} as={Link} to="/plants">All Plants</Nav.Link>         
             <Nav.Link onClick={()=>setExpanded(false)} as={Link} to="/add-new-plant">Add New Plant</Nav.Link>
             <Nav.Link onClick={()=>setExpanded(false)} as={Link} to="/treatments">Treatments</Nav.Link>
           </Nav>

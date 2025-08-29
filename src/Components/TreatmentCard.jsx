@@ -18,7 +18,7 @@ function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
   };
 
   return (
-    <Card className="text-center align-self-center" style={{ width: "70rem" }}>
+    <Card className="text-center align-self-center" >
       <Card.Body>
         <Form className="">
           <Form.Group>
