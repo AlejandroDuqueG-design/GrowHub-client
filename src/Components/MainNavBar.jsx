@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router";
+import logo from "../assets/logogrowhub.png"
 
 function MainNavBar() {
   const [expanded, setExpanded] = useState(false);
@@ -11,7 +12,7 @@ function MainNavBar() {
     <Navbar fixed="top" bg="success" data-bs-theme="dark" expand="lg" expanded={expanded}>
       <Container>
         <Navbar.Brand as={Link} to="/home">
-          <img src="/src/assets/logogrowhub.png" width="50" height="50" className="d-inline-block align-center" alt="gowhub logo" /> GROWHUB{" "}
+          <img src={logo} width="50" height="50" className="d-inline-block align-center" alt="gowhub logo" /> GROWHUB{" "}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded((prevState) => !prevState)} />
         <Navbar.Collapse id="basic-navbar-nav">

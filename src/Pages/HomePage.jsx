@@ -1,4 +1,5 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
+import logo from "../assets/logogrowhub.png"
 
 function HomePage() {
   return (
@@ -16,7 +17,7 @@ function HomePage() {
                 plant common name, scientific name, type of plant, watering routines, sunlight and a breve description. edit that list, add new
                 plants, delete existing plants. Also, you will be able to check on possible treatments for everyplant.
               </Card.Text>
-              <Card.Img className="w-25 h-25" variant="bottom" src="/src/assets/logogrowhub.png" alt="Logo GrowHub" />
+              <Card.Img className="w-25 h-25" variant="bottom" src={logo} alt="Logo GrowHub" />
             </Card.Body>
           </Card>
         </Col>
