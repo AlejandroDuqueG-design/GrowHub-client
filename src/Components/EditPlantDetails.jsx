@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 function EditPlantDetails({ onCancel }) {
   return (
@@ -45,10 +45,10 @@ function EditPlantDetails({ onCancel }) {
             <input type="text" name="Description" placeholder="description" />
           </label>
 
-          <button type="submit">Save</button>
-          <button type="button" onClick={onCancel}>
+          <Button variant="success" type="submit">Save</Button>
+          <Button variant="secondary" type="button" onClick={onCancel}>
             Cancel
-          </button>
+          </Button>
         </form>
       </Card>
     </div>

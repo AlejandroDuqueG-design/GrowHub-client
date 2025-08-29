@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import TreatmentCard from "../Components/TreatmentCard";
+import { Button } from "react-bootstrap";
 
 function TreatmentListPage() {
   const [treatments, setTreatments] = useState([]);
@@ -27,15 +28,16 @@ function TreatmentListPage() {
     }
   };
   return (
-    <div>
-      <h4>Treatments</h4>
-      <div><button>Add New Treatment</button></div>
-      <ul>
+    <div className="d-flex flex-column px-4 align-items-center min-vh-100 gap-3" >
+      <h5 >Treatments</h5>
+      <p >Treatments related to the plants</p>
+      <Button  variant="success">Add New Treatment</Button>
+      
+      
         {treatments.map((eachTreatment) => {
           return <TreatmentCard key={eachTreatment.id} {...eachTreatment} />;
         })}
        
-      </ul>
     </div>
   );
 }

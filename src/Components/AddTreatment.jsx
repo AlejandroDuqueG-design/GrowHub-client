@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router";
 
 function AddTreatment() {
@@ -60,8 +60,8 @@ function AddTreatment() {
               }}
             />
           </label>
-          <button type="submit">Submit</button>
-          <button type="button">Cancel</button>
+          <Button variant="success" type="submit">Submit</Button>
+          <Button variant="secondary" type="button">Cancel</Button>
         </form>
       </Card>
     </div>

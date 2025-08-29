@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import axios from "axios";
 import { Link } from "react-router";
 import { useState } from "react";
@@ -38,11 +38,15 @@ function PlantCardDetails({ id, commonName, scientificName, type, watering, sunl
         <h6><strong>Sunlight:</strong> {sunlight}</h6>
         <h6><strong>Description:</strong> {description}</h6>
         
-        <Link to={`/treatments/${id}`}><button >See treatments</button></Link>
+
+        <Card.Footer>
+        <Link to={`/plant-details/${id}`}>
+        <Link to={`/treatments/${id}`}><Button className="mt-2" variant="success" >See treatments</Button></Link></Link>
+        </Card.Footer>
         
       </Card>
-        <button type="button" onClick={() => setIsEditCardShowing(true)}>Edit</button>
-        <button type="button" onClick={handleDelete}>Delete</button>
+        <Button className="me-1" variant="outline-success" type="button" onClick={() => setIsEditCardShowing(true)}>Edit</Button>
+        <Button className="ms-1" variant="outline-secondary" type="button" onClick={handleDelete}>Delete</Button>
     </div>
   );
 }

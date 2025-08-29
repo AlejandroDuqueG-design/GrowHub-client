@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card, Form } from "react-bootstrap";
 import { Link } from "react-router";
 
 function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
@@ -9,26 +9,21 @@ function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
   const [timeOfYearValue, setTimeOfYearValue] = useState(timeOfYear);
 
   const handleDelete = async () => {
-
     try {
-
       await axios.delete(`${import.meta.env.VITE_SERVER_URL}/treatments/${id}`);
       console.log("Treatment deleted", id);
-      
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-
-    <div>
-    
-      <Card className="treatment-card">
-        <form className="treatment-form">
-          <label>
-            <h6>Treatment Description:</h6>
-            <input
+    <Card className="text-center align-self-center" style={{ width: "70rem" }}>
+      <Card.Body>
+        <Form className="">
+          <Form.Group>
+            <Form.Label>Treatment Description:</Form.Label>
+            <Form.Control
               type="text"
               name="treatmentDescription"
               placeholder="Treatment Description"
@@ -37,11 +32,11 @@ function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
                 setTreatmentDescriptionValue(event.target.value);
               }}
             />
-          </label>
+          </Form.Group>
 
-          <label>
-            <h6>Time of year:</h6>
-            <input
+          <Form.Group>
+            <Form.Label>Time of year:</Form.Label>
+            <Form.Control
               type="text"
               name="timeOfYear"
               placeholder="Time of Year"
@@ -50,15 +45,15 @@ function TreatmentCard({ id, plantId, treatmentDescription, timeOfYear }) {
                 setTimeOfYearValue(event.target.value);
               }}
             />
-          </label>
-        </form>
-        <Link to="/add-new-treatment">
-          
-        </Link>
-        <button onClick={handleDelete}>Delete treatment</button>
-      </Card>
-      
-    </div>
+          </Form.Group>
+        </Form>
+      </Card.Body>
+      <Card.Footer>
+        <Button variant="outline-secondary" onClick={handleDelete}>
+          Delete treatment
+        </Button>
+      </Card.Footer>
+    </Card>
   );
 }
 export default TreatmentCard;
