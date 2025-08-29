@@ -1,12 +1,65 @@
-# React + Vite
+# GrowHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is a [json-server](https://github.com/AlejandroDuqueG-design/GrowHub-server) created to feed data into the GrowHub React Application.
 
-Currently, two official plugins are available:
+#### [Growhub](https://github.com/AlejandroDuqueG-design/GrowHub-client)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Server Structure
 
-## Expanding the ESLint configuration
+## Collections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### plants
+
+```javascript
+{
+  commonName,
+  scientificName,
+  type,
+  watering,
+  sunlight,
+  description
+}
+```
+
+### treatments
+
+```javascript
+ {
+   plantId,
+   treatmentDescription,
+   timeOfYear
+ }
+```
+
+## Used API Endpoints in the App
+
+| HTTP Method | URL              | Request Body                | Description                 |
+| ----------- | ---------------- | --------------------------- | --------------------------- |
+| GET         | `/plants`         |                             | Sends all plants             |
+| POST        | `/plants`         | {commonName, scientificName, type}        | Creates a new plant          |
+| GET         | `/plants/:plantId` |                             | Sends all details of a plant |
+| PUT         | `/plants/:plantId` | {commonName, scientificName, type, watering, sunlight, description} |  Edits a plant object   |
+| DELETE      | `/plants/:plantId` |                             | Deletes a plant object       |
+| GET         | `/treatments`       |                             | Sends all treatments           |
+| POST        | `/treatments`       | {plantId, treatmentDescription, timeOfYear}              | Creates a new treatment        |
+| DELETe       | `/treatments`       | {plantId, treatmentDescription, timeOfYear}              | Deletes a treatment object             |
+
+
+## Links
+
+
+### Project
+
+[Link to GrowHub/Client repository](www.github.com/AlejandroDuqueG-design/GrowHub-client)
+
+[Link to GrowHub/Server respository](www.github.com/AlejandroDuqueG-design/GrowHub-server)
+
+[Deploy Link](www.your-deploy-url-here.com)
+
+### Figma
+
+[Link to your figma wireframes](www.figma.com/proto/jXSYn3R3NTAs7lhjXw7R7N/React-App---GrowHub?node-id=71-165&t=cUf0wlo8AXdmfMof-1)
+
+### Slides
+
+[Slides Link](www.your-slides-url-here.com)

@@ -3,21 +3,23 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body{
+  padding-top: 80px;
+}
 .plant-card {
   border: solid 1px black;
 }
 
-.navBar{
+/* .navBar{
   display: flex;                 
   justify-content: space-between; 
   align-items: center;            
@@ -57,29 +59,28 @@
 
 .nav-links button:hover {
   background-color: #c8e6c9;
-}
-.profile-logo {
-  border-radius: 50%; 
-  cursor: pointer;
-  background-color: white;
-}
-.plant-card {
-  width: 340px;
+} */
+
+/* .plant-card {
+  width: 300px;
   padding: 20px;
   margin: 20px auto;
   border-radius: 8px;
   background-color: #f9f9f9;
-}
+  display: flex;
+  
 
-.plant-form {
+} */
+
+/* .plant-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .plant-form h6 {
   margin: 0 0 4px 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #2e7d32;
 }
 
@@ -88,11 +89,11 @@
   padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   margin: 0 0 4px 0
-}
+} */
 
-.plant-form button {
+/* .plant-form button {
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -100,21 +101,24 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
-}
+  height: 30px;
+} */
 
-.plant-list-general{
-  padding: 20px;
+.plantlistpage-container{
+  padding-top: 90px;
+  padding-left: 20px;
 }
 
 .home-image {
   display: flex;              
-  justify-content: center;    
+  justify-content: center;
+  flex-direction: column;    
   align-items: center;        
   height: 100vh;               
 }
 
 .home-image img {
-  max-width: 400px;           
+  max-width: 300px;           
   width: 100%;                
   height: auto;               
 }
@@ -134,7 +138,8 @@
 }
 
 .add-plant-text{
-  padding: 20px;
+  padding-top: 90px;
+  padding-left: 20px;
 }
 
 .footer{
@@ -205,4 +210,30 @@ min-height: 100vh;
 
 .plant-details-card {
   width: 100%;
+}
+
+.edit-plantcarddetails-btn{
+border-radius: 4px;
+}
+.carddetails-container{
+  display: flexbox;
+  text-align: center;
+}
+.select-filter{
+  border-radius: 4px;
+}
+
+.treatment-card {
+  max-width: 400px;             
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+}
+
+.treatment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;                     
 }

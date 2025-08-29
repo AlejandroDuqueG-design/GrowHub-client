@@ -4,10 +4,11 @@ import HomePage from "./Pages/HomePage"
 import PlantListPage from "./Pages/PlantListPage"
 import PlantDetailsPage from "./Pages/PlantDetailsPage"
 import AddPlantPage from "./Pages/AddPlantPage"
-import ProfilePage from "./Pages/ProfilePage"
 import ErrorPage from "./Pages/ErrorPage"
 import Footer from "./Components/Footer"
 import { useState } from "react"
+import TreatmentListPage from "./Pages/TreatmentListPage"
+import AddTreatmentPage from "./Pages/AddTreatmentPage"
 
 
 function App() {
@@ -22,10 +23,12 @@ function App() {
       <Footer/>
       <Routes>
         <Route path="/" element={ <HomePage/> }/>
-        <Route path="/profile" element= { <ProfilePage/>}/>
         <Route path="/plants" element= { <PlantListPage/>}/>
         <Route path="/plant-details/:plantId" element={ <PlantDetailsPage/>}/> 
         <Route path="/add-new-plant" element={ <AddPlantPage/> }/>
+        <Route path="/treatments/" element={ <TreatmentListPage/>}/>
+        <Route path="/treatments/:plantId" element={ <TreatmentListPage/>}/>
+        <Route path="/add-new-treatment" element={ <AddTreatmentPage/>}/>
         
         <Route path="*" element={<ErrorPage/>}/>
               
